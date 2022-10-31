@@ -58,5 +58,5 @@ steps:
     ResourceGroupName: 'apps_res_group'
     SlotName: 'production'
     DeploymentType: 'webDeploy'
-    packageForLinux: '$(Pipeline.Workspace)/npm/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/npm'
     RuntimeStack: 'NODE|16-lts'
