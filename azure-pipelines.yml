@@ -58,5 +58,5 @@ steps:
     ResourceGroupName: 'apps_res_group'
     SlotName: 'production'
     DeploymentType: 'webDeploy'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Pipeline.Workspace)/npm/*.zip'
     RuntimeStack: 'NODE|16-lts'
