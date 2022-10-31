@@ -23,6 +23,8 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
+    mergeTestResults: true
+    testRunTitle: 'testing'
   displayName: 'npm install and build'
 
 - task: CopyFiles@2
