@@ -54,5 +54,8 @@ steps:
     azureSubscription: 'Azure subscription 1 (1d0cb6be-6566-451d-a081-0a7af836a572)'
     appType: 'webAppLinux'
     WebAppName: 'nodedevos'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'apps_res_group'
+    SlotName: 'production'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/npm'
     RuntimeStack: 'NODE|10-lts'
