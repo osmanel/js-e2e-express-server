@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '16.x'
+    versionSpec: '10.x'
   displayName: 'Install Node.js'
 
 - script: |
@@ -54,9 +54,5 @@ steps:
     azureSubscription: 'Azure subscription 1 (1d0cb6be-6566-451d-a081-0a7af836a572)'
     appType: 'webAppLinux'
     WebAppName: 'nodedevos'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'apps_res_group'
-    SlotName: 'production'
-    DeploymentType: 'webDeploy'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/npm'
-    RuntimeStack: 'NODE|16-lts'
+    RuntimeStack: 'NODE|10-lts'
