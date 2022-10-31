@@ -47,3 +47,16 @@ steps:
     artifactName: npm
   displayName: 'Publish npm artifact' 
 
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1 (1d0cb6be-6566-451d-a081-0a7af836a572)'
+    appType: 'webAppLinux'
+    WebAppName: 'nodedevos'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'apps_res_group'
+    SlotName: 'production'
+    DeploymentType: 'webDeploy'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'NODE|16-lts'
